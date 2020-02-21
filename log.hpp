@@ -20,4 +20,4 @@ namespace Internal
   }
 } // namespace Internal
 
-#define LOG(...) Internal::log(__FILE__, __LINE__, __VA_ARGS__)
+#define LOG(...) ::Internal::log(__FILE__, __LINE__, __VA_ARGS__)
