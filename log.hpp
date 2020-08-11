@@ -15,7 +15,7 @@ namespace Internal
   template <typename... Args>
   void log(const char *fileName, int line, Args &&... args)
   {
-    std::cout << fileName << ":" << line;
+    std::cout << fileName << ":" << line << ":";
     logToStrm(std::cout, args...);
   }
 } // namespace Internal
