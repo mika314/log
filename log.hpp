@@ -4,11 +4,11 @@
 namespace Internal
 {
   template <typename... Args>
-  void log(const char *fileName, int line, Args &&... args)
+  void log(const char *fileName, int line, Args &&...args)
   {
-    std::cout << fileName << ":" << line << ":";
-    ((std::cout << " " << std::forward<Args>(args)), ...);
-    std::cout << std::endl;
+    std::clog << fileName << ":" << line << ":";
+    ((std::clog << " " << std::forward<Args>(args)), ...);
+    std::clog << std::endl;
   }
 } // namespace Internal
 
